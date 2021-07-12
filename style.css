@@ -1,20 +1,24 @@
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background: #E5E5E5;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #E5E5E5;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
+  background-color: #fff;
   width: 1000px;
   height: 1200px;
-  background-color: #fff;
   margin: 40px auto;
+  display: flex;
+  flex-direction: row;
   box-shadow: 25px 25px 15px rgba(0, 0, 0, 0.5);
 }
 
 aside {
-  background: #1E2939;
+  background-color: #1E2939;
   width: 320px;
 }
 
@@ -25,17 +29,19 @@ aside {
   object-fit: cover;
 }
 
-.skills,
-.skills1 {
+.skills, .skills1 {
+  margin-left: 33px;
   color: white;
   padding: 10px;
-  margin-left: 33px;
 }
 
-h3.info,
-h3.info1 {
+h3.info, h3.info1, h3.project {
   font-size: 22px;
   font-family: Montserrat;
+}
+
+h3.project {
+  color: #000;
 }
 
 .c-e {
@@ -47,8 +53,12 @@ h3.info1 {
 
 a.tel {
   color: white;
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 14px;
+  transition-duration: 0.8s;
+}
+a.tel:hover {
+  color: #FF0000;
 }
 
 ul.skill {
@@ -61,8 +71,9 @@ span.skills {
   color: #FFFFFF;
 }
 
-
-.content {padding: 70px 100px;}
+.content {
+  padding: 70px 100px;
+}
 
 .about-me {
   width: 400px;
@@ -92,15 +103,10 @@ p.info {
   margin-bottom: 45px;
 }
 
-h3.project {
-  font-family: Montserrat;
-  font-size: 22px;
-}
-
 li.strong {
   font-weight: bold;
   font-size: 16px;
-  color: #000000;
+  color: #000;
 }
 
 .projects-text {
@@ -110,24 +116,23 @@ li.strong {
   margin-left: 15px;
 }
 
-a.project,
-.project1 {
+a.project, .project1 {
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
   color: #595959;
-  text-decoration: none;
+  transition-duration: 0.8s;
+}
+a.project:hover, .project1:hover {
+  color: #FF8C00;
 }
 
 span.strong {
-  font-size: 14px;
-  line-height: 24px;
   color: #000000;
 }
 
 h4 {
   font-size: 16px;
-  color: black;
 }
 
 span.colortext {
@@ -145,13 +150,7 @@ ul.work1 {
   color: #595959;
 }
 
-.tesla {
-  font-size: 14px;
-  line-height: 24px;
-  color: #595959;
-}
-
-.ovo {
+.tesla, .ovo, span.strong {
   font-size: 14px;
   line-height: 24px;
   color: #595959;
@@ -168,48 +167,52 @@ h4.univer {
   margin-bottom: -5px;
 }
 
-.foto1 {display: none;}
-
-
-
-@media (max-width: 1100px) {
-  .container {width: 80%;}
-
-  .content {margin: 40px auto;
-     padding: 10px;}
-
-  .aside {width: 260px;}
-
-  .foto {width: 260px;
-    height: 200px;}
-
-  .strong1 {margin-left:16px;}
-
-  a.project {margin-right: 45px;}
-  a.project1 {margin-right: 50px;}
+.foto1 {
+  display: none;
 }
 
-
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
   .container {
-   flex-direction:column-reverse;
-    width: 70%;
-    height: 100%;
-    box-shadow: 1px 1px 30px 4px rgba(0, 0, 0, 1);
+    width: 80%;
   }
 
-  .content {width: 90%;
-    margin: auto;
-    padding: 30px 0 0 20px;}
+  .content {
+    margin: 40px auto;
+    padding: 10px;
+  }
 
-   .name-foto {
+  aside {
+    width: 260px;
+  }
+
+  .foto {
+    width: 260px;
+    height: 200px;
+  }
+}
+@media (max-width: 820px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 70%;
+    height: 100%;
+    box-shadow: 1px 1px 30px 4px black;
+  }
+
+  .content {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0 0 20px;
+  }
+
+  .name-foto {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    }
+  }
 
   span.skills, a.tel, .skills, .skills1 {
-    color: black;}
+    color: black;
+  }
 
   .foto1 {
     display: initial;
@@ -223,58 +226,85 @@ h4.univer {
     font-size: 18px;
   }
 
-  h1.name {font-size: 28px;
-    width: 64%;}
+  h1.name {
+    font-size: 28px;
+    width: 64%;
+  }
 
-  .about-me {width: 90%;
-    height: auto;}
+  .about-me {
+    width: 90%;
+    height: auto;
+  }
 
-  .foto {display: none;}
+  .foto {
+    display: none;
+  }
 
-div.work {width: 90%;}
+  div.work {
+    width: 90%;
+  }
 
- .aside {
-   width: 60%;
-   display:flex;
-   flex-direction:column;
-   margin: 40px auto;
-   border-radius: 1%;
-   background-color: #fff;
-   box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.5);
- }
+  aside {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    border-radius: 1%;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.5);
+  }
 
-  .c-e, h3.info1 {margin-left: 1px;}
-  .skills1 {order: 1;}
+  .c-e {
+    margin-left: 20px;
+  }
 
-  .skills, .skills1 {margin :auto;
-   width: 90%;}
- 
+  .skills1 {
+    order: 1;
+  }
 
-  h3.info, h3.info1 {font-size: 18px;}
+  .skills, .skills1 {
+    margin: auto;
+    width: 90%;
+  }
+
+  h3.info, h3.info1 {
+    font-size: 18px;
+  }
 }
-
 @media (max-width: 620px) {
- .skills, .skills1 {font-size: 12px;}
+  skills, .skills1 {
+    font-size: 12px;
+  }
 }
-
-
 @media (max-width: 571px) {
- h1.name {width: auto; 
-text-align: center;}
+  h1.name {
+    width: auto;
+    text-align: center;
+  }
 
-   .foto1 { width: 130px;
+  .foto1 {
+    width: 130px;
     height: 130px;
-    margin: 0 auto;}
+    margin: 0 auto;
+  }
 }
-
-
 @media (max-width: 459px) {
-.projects {margin-top: 45px;}
-.projects-text {margin-left: 1px;}
+  .projects {
+    margin-top: 45px;
+  }
 
+  .projects-text {
+    margin-left: 1px;
+  }
 }
-
 @media (max-width: 400px) {
-  .skills, .skills1 {font-size: 11px;}
-  ul.skill {margin-left: -30px;}
+  .skills, .skills1 {
+    font-size: 11px;
+  }
+
+  ul.skill {
+    margin-left: -30px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
